@@ -1,0 +1,82 @@
+stages:
+  - build
+  - test
+
+zephyr_build:
+  stage: build
+  image: hardwario/nrf-connect-sdk-build:v2.9.0-1
+  cache:
+    paths:
+      - external/
+  before_script:
+    - west update -o=--depth=1 -n
+  script:
+    - west build --build-dir $CI_PROJECT_DIR/application/build $CI_PROJECT_DIR/application --pristine --board nrf52833dk/nrf52833 --no-sysbuild -- -DNCS_TOOLCHAIN_VERSION=NONE -DCONF_FILE=$CI_PROJECT_DIR/application/prj.conf
+
+
+pytest:
+  stage: test
+  image: python:3.12-slim
+  before_script:
+    - apt-get update
+    - pip3 install -r requirements.txt
+  script:
+    - pytest -v
+
+# dt_aliases:
+#   stage: test
+#   image: ghcr.io/alpine:latest
+#   script:
+#     - |+
+#       for dt_alias in heartbeat ivpump buzzer error sleepbutton frequpbutton freqdownbutton resetbutton
+#       do 
+#         grep $dt_alias $CI_PROJECT_DIR/boards/nrf52833dk_nrf52833.overlay
+#       done
+
+# gpio_structs:
+#   stage: test
+#   image: ghcr.io/alpine:latest
+#   script:
+#     - |+
+#       for struct in heartbeat_led iv_pump_led buzzer_led error_led sleep_button freq_up_button freq_down_button reset_button
+#       do 
+#         grep $struct $CI_PROJECT_DIR/src/main.c
+#       done
+
+# macros:
+#   stage: test
+#   image: ghcr.io/alpine:latest
+#   script:
+#     - |+
+#       for macro in LED_BLINK_FREQ_HZ FREQ_UP_INC_HZ FREQ_DOWN_INC_HZ
+#       do 
+#         grep $macro $CI_PROJECT_DIR/src/main.c
+#       done
+
+# check_v1_0_0_tag:
+#   stage: git_check
+#   image: ghcr.io/alpine:latest
+#   before_script:
+#     - apk update
+#     - apk add --no-cache git
+#   script:
+#     - git fetch --tags
+#     - |
+#       if git rev-parse -q --verify "refs/tags/v1.0.0" >/dev/null; then
+#         echo "Tag v1.0.0 exists"
+#       else
+#         echo "Tag v1.0.0 does not exist"
+#         exit 1
+#       fi
+
+# check_state_diagram:
+#   stage: test
+#   image: ghcr.io/alpine:latest
+#   script:
+#     - |+
+#       if [ -f "state_diagram.png" ]; then
+#         echo "state_diagram.png exists"
+#       else
+#         echo "state_diagram.png does not exist"
+#         exit 1
+#       fi

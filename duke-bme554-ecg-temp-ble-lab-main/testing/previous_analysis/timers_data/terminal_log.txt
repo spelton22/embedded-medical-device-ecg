@@ -1,0 +1,241 @@
+[00:00:04.803,161] <inf> main: Heartbeat LED toggled time = 1840332030 ns
+[00:00:04.803,161] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:04.803,192] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:05.048,034] <inf> main: Action timer expired
+[00:00:05.055,725] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:05.055,725] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:05.298,004] <inf> main: Heartbeat timer expired
+[00:00:05.298,004] <inf> main: Action timer expired
+[00:00:05.298,217] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:05.298,217] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:05.298,248] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:05.548,034] <inf> main: Action timer expired
+[00:00:05.550,781] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:05.550,781] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:05.798,004] <inf> main: Heartbeat timer expired
+[00:00:05.798,004] <inf> main: Action timer expired
+[00:00:05.803,344] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:05.803,344] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:05.803,375] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:06.048,034] <inf> main: Action timer expired
+[00:00:06.055,908] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:06.055,938] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:06.298,004] <inf> main: Heartbeat timer expired
+[00:00:06.298,034] <inf> main: Action timer expired
+[00:00:06.298,370] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:06.298,370] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:06.298,400] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:06.548,034] <inf> main: Action timer expired
+[00:00:06.550,933] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:06.550,933] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:06.798,004] <inf> main: Heartbeat timer expired
+[00:00:06.798,004] <inf> main: Action timer expired
+[00:00:06.803,497] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:06.803,497] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:06.803,527] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:07.048,034] <inf> main: Action timer expired
+[00:00:07.056,060] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:07.056,060] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:07.298,004] <inf> main: Heartbeat timer expired
+[00:00:07.298,004] <inf> main: Action timer expired
+[00:00:07.298,522] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:07.298,522] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:07.298,553] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:07.548,034] <inf> main: Action timer expired
+[00:00:07.551,086] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:07.551,116] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:07.798,004] <inf> main: Heartbeat timer expired
+[00:00:07.798,034] <inf> main: Action timer expired
+[00:00:07.803,649] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:07.803,649] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:07.803,680] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:08.048,034] <inf> main: Action timer expired
+[00:00:08.056,213] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:08.056,213] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:08.147,155] <inf> main: frequency decrease/down button pressed in awake run state.
+[00:00:08.147,155] <inf> main: Decreased action LED blink frequency
+[00:00:08.157,257] <inf> main: In awake entry state.
+[00:00:08.298,004] <inf> main: Heartbeat timer expired
+[00:00:08.298,767] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:08.647,247] <inf> main: Action timer expired
+[00:00:08.652,313] <inf> main: Action LEDs toggled time = 1198425292 ns
+[00:00:08.652,313] <inf> main: Action LEDs frequency = 1 Hz
+[00:00:08.798,004] <inf> main: Heartbeat timer expired
+[00:00:08.803,863] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:09.147,247] <inf> main: Action timer expired
+[00:00:09.147,460] <inf> main: Action LEDs toggled time = 1000000000 ns
+[00:00:09.147,460] <inf> main: Action LEDs frequency = 1 Hz
+[00:00:09.298,004] <inf> main: Heartbeat timer expired
+[00:00:09.299,072] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:09.647,247] <inf> main: Action timer expired
+[00:00:09.652,618] <inf> main: Action LEDs toggled time = 1000000000 ns
+[00:00:09.652,618] <inf> main: Action LEDs frequency = 1 Hz
+[00:00:09.798,004] <inf> main: Heartbeat timer expired
+[00:00:09.804,168] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:10.147,247] <inf> main: Action timer expired
+[00:00:10.147,613] <inf> main: Action LEDs toggled time = 1000000000 ns
+[00:00:10.147,613] <inf> main: Action LEDs frequency = 1 Hz
+[00:00:10.298,004] <inf> main: Heartbeat timer expired
+[00:00:10.299,163] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:10.647,247] <inf> main: Action timer expired
+[00:00:10.652,709] <inf> main: Action LEDs toggled time = 1000000000 ns
+[00:00:10.652,709] <inf> main: Action LEDs frequency = 1 Hz
+[00:00:10.798,004] <inf> main: Heartbeat timer expired
+[00:00:10.804,260] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:11.147,247] <inf> main: Action timer expired
+[00:00:11.147,705] <inf> main: Action LEDs toggled time = 1000000000 ns
+[00:00:11.147,705] <inf> main: Action LEDs frequency = 1 Hz
+[00:00:11.298,004] <inf> main: Heartbeat timer expired
+[00:00:11.299,255] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:11.647,247] <inf> main: Action timer expired
+[00:00:11.652,801] <inf> main: Action LEDs toggled time = 1000000000 ns
+[00:00:11.652,801] <inf> main: Action LEDs frequency = 1 Hz
+[00:00:11.798,004] <inf> main: Heartbeat timer expired
+[00:00:11.804,351] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:12.147,247] <inf> main: Action timer expired
+[00:00:12.147,796] <inf> main: Action LEDs toggled time = 1000000000 ns
+[00:00:12.147,796] <inf> main: Action LEDs frequency = 1 Hz
+[00:00:12.298,004] <inf> main: Heartbeat timer expired
+[00:00:12.299,346] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:12.647,247] <inf> main: Action timer expired
+[00:00:12.652,893] <inf> main: Action LEDs toggled time = 1000000000 ns
+[00:00:12.652,893] <inf> main: Action LEDs frequency = 1 Hz
+[00:00:12.798,004] <inf> main: Heartbeat timer expired
+[00:00:12.804,443] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:13.147,247] <inf> main: Action timer expired
+[00:00:13.147,888] <inf> main: Action LEDs toggled time = 1000000000 ns
+[00:00:13.147,888] <inf> main: Action LEDs frequency = 1 Hz
+[00:00:13.298,004] <inf> main: Heartbeat timer expired
+[00:00:13.299,438] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:13.349,945] <inf> main: frequency increase/up button pressed in awake run state.
+[00:00:13.349,945] <inf> main: Increased action LED blink frequency
+[00:00:13.360,107] <inf> main: In awake entry state.
+[00:00:13.600,006] <inf> main: Action timer expired
+[00:00:13.602,630] <inf> main: Action LEDs toggled time = 905517578 ns
+[00:00:13.602,630] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:13.798,004] <inf> main: Heartbeat timer expired
+[00:00:13.804,687] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:13.849,945] <inf> main: Action timer expired
+[00:00:13.855,224] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:13.855,224] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:14.100,006] <inf> main: Action timer expired
+[00:00:14.107,788] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:14.107,788] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:14.298,004] <inf> main: Heartbeat timer expired
+[00:00:14.299,743] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:14.350,006] <inf> main: Action timer expired
+[00:00:14.350,250] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:14.350,250] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:14.600,006] <inf> main: Action timer expired
+[00:00:14.602,813] <inf> main: Action LEDs toggled time = 500000000 ns
+[00:00:14.602,844] <inf> main: Action LEDs frequency = 2 Hz
+[00:00:14.744,262] <inf> main: frequency increase/up button pressed in awake run state.
+[00:00:14.744,262] <inf> main: Increased action LED blink frequency
+[00:00:14.754,394] <inf> main: In awake entry state.
+[00:00:14.798,004] <inf> main: Heartbeat timer expired
+[00:00:14.804,992] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:14.910,369] <inf> main: Action timer expired
+[00:00:14.916,107] <inf> main: Action LEDs toggled time = 620727540 ns
+[00:00:14.916,107] <inf> main: Action LEDs frequency = 3 Hz
+[00:00:15.076,385] <inf> main: Action timer expired
+[00:00:15.077,758] <inf> main: Action LEDs toggled time = 332031250 ns
+[00:00:15.077,789] <inf> main: Action LEDs frequency = 3 Hz
+[00:00:15.242,401] <inf> main: Action timer expired
+[00:00:15.249,511] <inf> main: Action LEDs toggled time = 332031250 ns
+[00:00:15.249,511] <inf> main: Action LEDs frequency = 3 Hz
+[00:00:15.298,004] <inf> main: Heartbeat timer expired
+[00:00:15.300,048] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:15.408,416] <inf> main: Action timer expired
+[00:00:15.411,163] <inf> main: Action LEDs toggled time = 332031250 ns
+[00:00:15.411,163] <inf> main: Action LEDs frequency = 3 Hz
+[00:00:15.574,432] <inf> main: Action timer expired
+[00:00:15.582,916] <inf> main: Action LEDs toggled time = 332031250 ns
+[00:00:15.582,946] <inf> main: Action LEDs frequency = 3 Hz
+[00:00:15.593,017] <inf> main: frequency increase/up button pressed in awake run state.
+[00:00:15.593,048] <inf> main: Increased action LED blink frequency
+[00:00:15.603,149] <inf> main: In awake entry state.
+[00:00:15.718,109] <inf> main: Action timer expired
+[00:00:15.724,456] <inf> main: Action LEDs toggled time = 287353516 ns
+[00:00:15.724,456] <inf> main: Action LEDs frequency = 4 Hz
+[00:00:15.798,004] <inf> main: Heartbeat timer expired
+[00:00:15.805,297] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:15.843,109] <inf> main: Action timer expired
+[00:00:15.845,703] <inf> main: Action LEDs toggled time = 250000000 ns
+[00:00:15.845,703] <inf> main: Action LEDs frequency = 4 Hz
+[00:00:15.968,109] <inf> main: Action timer expired
+[00:00:15.977,050] <inf> main: Action LEDs toggled time = 250000000 ns
+[00:00:15.977,081] <inf> main: Action LEDs frequency = 4 Hz
+[00:00:16.093,109] <inf> main: Action timer expired
+[00:00:16.098,297] <inf> main: Action LEDs toggled time = 250000000 ns
+[00:00:16.098,297] <inf> main: Action LEDs frequency = 4 Hz
+[00:00:16.218,109] <inf> main: Action timer expired
+[00:00:16.219,543] <inf> main: Action LEDs toggled time = 250000000 ns
+[00:00:16.219,543] <inf> main: Action LEDs frequency = 4 Hz
+[00:00:16.298,004] <inf> main: Heartbeat timer expired
+[00:00:16.300,384] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:16.343,109] <inf> main: Action timer expired
+[00:00:16.350,891] <inf> main: Action LEDs toggled time = 250000000 ns
+[00:00:16.350,921] <inf> main: Action LEDs frequency = 4 Hz
+[00:00:16.468,109] <inf> main: Action timer expired
+[00:00:16.472,137] <inf> main: Action LEDs toggled time = 250000000 ns
+[00:00:16.472,137] <inf> main: Action LEDs frequency = 4 Hz
+[00:00:16.593,109] <inf> main: Action timer expired
+[00:00:16.593,383] <inf> main: Action LEDs toggled time = 250000000 ns
+[00:00:16.593,383] <inf> main: Action LEDs frequency = 4 Hz
+[00:00:16.603,515] <inf> main: frequency increase/up button pressed in awake run state.
+[00:00:16.603,515] <inf> main: Increased action LED blink frequency
+[00:00:16.613,677] <inf> main: In awake entry state.
+[00:00:16.703,582] <inf> main: Action timer expired
+[00:00:16.704,711] <inf> main: Action LEDs toggled time = 220947266 ns
+[00:00:16.704,711] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:16.798,004] <inf> main: Heartbeat timer expired
+[00:00:16.803,558] <inf> main: Action timer expired
+[00:00:16.805,755] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:16.805,755] <inf> main: Action LEDs toggled time = 200012206 ns
+[00:00:16.805,786] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:16.903,594] <inf> main: Action timer expired
+[00:00:16.906,799] <inf> main: Action LEDs toggled time = 200012208 ns
+[00:00:16.906,799] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:17.003,601] <inf> main: Action timer expired
+[00:00:17.007,843] <inf> main: Action LEDs toggled time = 200012206 ns
+[00:00:17.007,873] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:17.103,607] <inf> main: Action timer expired
+[00:00:17.108,886] <inf> main: Action LEDs toggled time = 200012208 ns
+[00:00:17.108,886] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:17.203,613] <inf> main: Action timer expired
+[00:00:17.209,930] <inf> main: Action LEDs toggled time = 200012206 ns
+[00:00:17.209,930] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:17.298,004] <inf> main: Heartbeat timer expired
+[00:00:17.300,872] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:17.303,619] <inf> main: Action timer expired
+[00:00:17.310,974] <inf> main: Action LEDs toggled time = 200012208 ns
+[00:00:17.311,004] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:17.403,625] <inf> main: Action timer expired
+[00:00:17.412,017] <inf> main: Action LEDs toggled time = 200012206 ns
+[00:00:17.412,017] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:17.503,631] <inf> main: Action timer expired
+[00:00:17.513,061] <inf> main: Action LEDs toggled time = 200012208 ns
+[00:00:17.513,061] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:17.603,637] <inf> main: Action timer expired
+[00:00:17.604,003] <inf> main: Action LEDs toggled time = 200012206 ns
+[00:00:17.604,003] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:17.703,643] <inf> main: Action timer expired
+[00:00:17.705,078] <inf> main: Action LEDs toggled time = 200012208 ns
+[00:00:17.705,078] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:17.798,004] <inf> main: Heartbeat timer expired
+[00:00:17.803,619] <inf> main: Action timer expired
+[00:00:17.806,121] <inf> main: Heartbeat LED toggled time = 1000000000 ns
+[00:00:17.806,121] <inf> main: Action LEDs toggled time = 200012206 ns
+[00:00:17.806,152] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:17.903,656] <inf> main: Action timer expired
+[00:00:17.907,165] <inf> main: Action LEDs toggled time = 200012208 ns
+[00:00:17.907,165] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:18.003,662] <inf> main: Action timer expired
+[00:00:18.008,209] <inf> main: Action LEDs toggled time = 200012206 ns
+[00:00:18.008,239] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:18.103,668] <inf> main: Action timer expired
+[00:00:18.109,252] <inf> main: Action LEDs toggled time = 200012208 ns
+[00:00:18.109,252] <inf> main: Action LEDs frequency = 5 Hz
+[00:00:18.203,674] <inf> main: Action timer expired
+[00:00:18.210,296] <inf> main: Action LEDs toggled time = 200012206 ns
+[00:00:18.210,296] <inf> main: Action LEDs frequency = 5 Hz

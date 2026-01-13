@@ -1,0 +1,138 @@
+@startuml
+
+[*] -> INIT
+
+state INIT {
+  init_run: check GPIO0 interface ready
+  init_run: initalize all LED output pins
+  init_run: configure all buttons
+  init_run: attach callbacks to buttons
+  init_run: set up GPIO callbacks for buttons
+  init_run: initialize event object for button events
+  init_run: configure ADC channel 
+  init_run: configure PWM
+}
+
+state IDLE {
+  idle_entry: disable idle button
+  idle_entry: start battery update timer
+  idle_entry -> idle_run
+  idle_run: wait for button event (battery timer, temp / hr / reset button)
+  idle_run -> idle_exit
+  idle_exit: stop battery update timer
+  idle_exit: enable idle button
+}
+
+state ERROR {
+  error_entry: set pwm to 0
+  error_entry: turn off battery led
+  error_entry: disable all button but reset
+  error_entry: suspend heartbeat thread
+  error_entry: resume error thread
+  error_entry: stop heart rate on & off timer
+  error_entry: set heart rate led to off
+  error_entry -> error_run
+  error_run: test for which error code occured
+  error_run: wait for reset button
+  error_run -> error_exit
+  error_exit: configure buttons
+  error_exit: suspend error thread
+  error_exit: turn off all leds
+  error_exit: resume heartbeat thread
+  error_exit: 
+}
+
+state RESET {
+  reset_entry: disable all buttons
+  reset_entry: stop hr on and off timer
+  reset_entry: turn off heart rate led
+  reset_entry --> reset_run
+  reset_run: clear any values stored to memory 
+  reset_run --> reset_exit
+  reset_exit: configure buttons 
+}
+
+state HEARTBEAT_LED_THREAD {
+  thread_heartbeat: toggle heartbeat LED @ 25% duty cycle
+}
+
+state ERROR_LED_THREAD {
+  thread_error: toggle heartbeat LED @ 25% duty cycle
+}
+
+state BATTERY_MEASURE {
+  battery_measure_entry: init adc sequence
+  battery_measure_entry --> battery_measure_run
+  battery_measure_run: take adc reading
+  battery_measure_run: convert raw value to mV
+  battery_measure_run: send bluetooth notification
+  battery_measure_run: test for button event
+  
+}
+
+state BATTERY_SET {
+  battery_set_run : convert mV reading to pwm percentage
+  battery_set_run: set pwm pulse
+  battery_set_run: test for button event 
+}
+
+state TEMP_MEASURE {
+  temp_measure_run: read temp sensor
+  temp_measure_run: send ble notification
+  temp_measure_run: test for button event 
+}
+
+state HEART_RATE_MEASURE {
+  heart_rate_measure_entry: init adc sequence
+  heart_rate_measure_entry: read adc async to buffer
+  heart_rate_measure_entry -> heart_rate_measure_run
+  heart_rate_measure_run: wait for program event 
+  heart_rate_measure_run -> heart_rate_measure_exit 
+  heart_rate_measure_exit : stop hr update timer 
+}
+
+
+INIT ---> BATTERY_MEASURE : successful init
+INIT --> ERROR: unsuccessful init
+IDLE --> BATTERY_MEASURE: battery timer event expired
+IDLE --> TEMP_MEASURE : temp button pressed
+IDLE --> HEART_RATE_MEASURE : heart rate button pressed
+IDLE --> RESET : reset button pressed 
+
+ERROR --> RESET : reset button pressed 
+ERROR --> ERROR_LED_THREAD
+
+RESET --> IDLE : completed reset
+
+BATTERY_MEASURE --> ERROR : error occured with adc 
+BATTERY_MEASURE --> IDLE: idle button pressed
+BATTERY_MEASURE --> TEMP_MEASURE: temp button pressed
+BATTERY_MEASURE --> HEART_RATE_MEASURE: heart rate button pressed
+BATTERY_MEASURE --> RESET : reset button pressed 
+BATTERY_MEASURE --> BATTERY_SET: sucessful taking adc measurement
+
+BATTERY_SET --> ERROR : error occured with setting pwm 
+BATTERY_SET --> IDLE: idle button pressed or done
+BATTERY_SET --> TEMP_MEASURE: temp button pressed
+BATTERY_SET --> HEART_RATE_MEASURE: heart rate button pressed
+BATTERY_SET --> RESET : reset button pressed 
+
+TEMP_MEASURE --> IDLE : done with measurement or idle button
+TEMP_MEASURE --> ERROR: error reading temp
+TEMP_MEASURE --> HEART_RATE_MEASURE: heart rate button pressed
+TEMP_MEASURE --> RESET : reset button pressed 
+
+HEART_RATE_MEASURE --> ERROR: error reading adc 
+HEART_RATE_MEASURE --> IDLE : idle or hr button pressed
+HEART_RATE_MEASURE --> TEMP_MEASURE: temp button pressed
+HEART_RATE_MEASURE --> RESET: reset button pressed 
+
+INIT --> [*] : batteries dead
+IDLE --> [*] : batteries dead
+ERROR --> [*] : batteries dead
+RESET --> [*] : batteries dead
+BATTERY_MEASURE --> [*] : batteries dead
+BATTERY_SET --> [*] : batteries dead
+TEMP_MEASURE --> [*] : batteries dead
+HEART_RATE_MEASURE --> [*] : batteries dead
+@enduml
