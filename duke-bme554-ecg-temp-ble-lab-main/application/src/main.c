@@ -60,14 +60,12 @@ struct adc_sequence_options options = {
     .extra_samplings = BUFFER_ARRAY_LEN - 1,  // -1 b/c first sample is already in the buffer
     .interval_us = SAMPLE_INTERVAL_US,  // 5ms between samples (200 Hz sampling)
     .callback = diff_adc_sequence_callback,  // called after each sample is collected
-    // .async = &async_signal,
 };
 
 struct adc_sequence sequence_diff = {
     .options = &options,  // add the options to the sequence
     .buffer = &diff_adc_buffer,  // buf is now a pointer to the first index of an array
     .buffer_size = sizeof(diff_adc_buffer),  // need to specify the size of the buffer array in bytes
-        // non-global/local array scope
 };
 
 // PWM SETUP
