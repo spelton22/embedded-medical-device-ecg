@@ -67,7 +67,6 @@ state BATTERY_MEASURE {
   battery_measure_run: convert raw value to mV
   battery_measure_run: send bluetooth notification
   battery_measure_run: test for button event
-  
 }
 
 state BATTERY_SET {

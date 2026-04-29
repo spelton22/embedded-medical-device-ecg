@@ -222,3 +222,4 @@ void bluetooth_set_error(char* message){
         }
     }
 }
+

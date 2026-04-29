@@ -1,0 +1,57 @@
+@startuml
+
+skinparam state {
+  BackgroundColor LightBlue
+  BorderColor DarkBlue
+  FontSize 13
+  ArrowColor DarkGray
+}
+skinparam state<<error>> {
+  BackgroundColor #FFCCCC
+  BorderColor Red
+}
+skinparam state<<lowpower>> {
+  BackgroundColor LightGray
+  BorderColor Gray
+}
+skinparam NoteBackgroundColor #FFFACD
+skinparam NoteBorderColor #CCAA00
+
+[*] -down-> INIT
+
+note right of INIT
+  BTN0 → IDLE from any measurement state (preserves data)
+  BTN3 → RESET from any state (clears data)
+  Battery dead → LOW_POWER from any state
+end note
+
+INIT -d-> IDLE       : init ok
+INIT -right-> ERROR     : init fail
+
+IDLE -left-> BATTERY_MEASURE     : battery timer
+IDLE -down-> TEMP_MEASURE        : BTN1
+IDLE -right-> HEART_RATE_MEASURE : BTN2
+IDLE -right-> ERROR              : battery < 75%
+
+BATTERY_MEASURE -down-> BATTERY_SET  : ADC ok
+BATTERY_MEASURE -right-> ERROR       : ADC error
+
+BATTERY_SET -up-> IDLE               : done
+BATTERY_SET -right-> ERROR           : PWM error
+
+TEMP_MEASURE -up-> IDLE              : done
+TEMP_MEASURE -right-> HEART_RATE_MEASURE : BTN2
+TEMP_MEASURE -right-> ERROR          : sensor error
+
+HEART_RATE_MEASURE -up-> IDLE        : done
+HEART_RATE_MEASURE -left-> TEMP_MEASURE : BTN1
+HEART_RATE_MEASURE -left-> ERROR     : ADC error
+
+ERROR -down-> RESET                  : BTN3
+ERROR -down-> LOW_POWER              : 2 min elapsed
+
+RESET -up-> IDLE
+
+LOW_POWER -down-> [*]
+
+@enduml
