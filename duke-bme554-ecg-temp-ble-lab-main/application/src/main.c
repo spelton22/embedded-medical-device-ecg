@@ -17,9 +17,9 @@ LOG_MODULE_REGISTER(main, LOG_LEVEL_DBG);
 #define HEARTBEAT_TOGGLE_INTERVAL_MS 500 // heartbeat LED toggles every 500 ms
 #define BATTERY_TIMER_INTERVAL_MS 60000 // 1 minute
 #define ERROR_LED_BLINK_INTERVAL_MS 500 // error LED blink interval
-#define BUFFER_ARRAY_LEN 4000 // 20 samples/cycle × 20 cycles
+#define BUFFER_ARRAY_LEN 4000 
 #define SAMPLE_INTERVAL_US 2500 // 2.5 ms between samples (400 Hz sampling)
-#define SAMPLE_TIME_SEC ((BUFFER_ARRAY_LEN *SAMPLE_INTERVAL_US)/1000000)  // total time to sample entire buffer
+#define SAMPLE_TIME_SEC ((BUFFER_ARRAY_LEN * SAMPLE_INTERVAL_US)/1000000)  // total time to sample entire buffer
 #define MEASUREMENT_DELAY_MS 1000 
 #define HR_UPDATE_INTERVAL_MS 5000 // update heart rate every 5 seconds
 #define LED_ON 1
@@ -761,7 +761,7 @@ static void heart_rate_measure_run(void *o)
             k_event_post(&error_events, ERROR_CODE_ADC_EVENT);
             smf_set_state(SMF_CTX(&s_obj), &machine_states[ERROR]);
         }
-        int cycles = calc_cycles(diff_adc_buffer, BUFFER_ARRAY_LEN);
+        int cycles = detect_heartrate_bpm(diff_adc_buffer, BUFFER_ARRAY_LEN);
         float bpm = (((float)cycles * (float)MINUTE_SEC)) / ((float)SAMPLE_TIME_SEC);
         LOG_INF("BPM = %f", (double) bpm);
 
